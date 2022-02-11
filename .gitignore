@@ -1,11 +1,3 @@
-.next/
-
-.DS_*
-*.log
-logs
-**/*.backup.*
-**/*.back.*
-
 .yarn/*
 !.yarn/cache
 !.yarn/patches
@@ -14,4 +6,10 @@ logs
 !.yarn/sdks
 !.yarn/versions
 
-# .pnp.*
+.next/
+
+.DS_*
+*.log
+logs
+**/*.backup.*
+**/*.back.*
