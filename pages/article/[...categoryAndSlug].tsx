@@ -1,6 +1,5 @@
 import { bundleMDX } from 'mdx-bundler';
 import { getMDXComponent } from 'mdx-bundler/client';
-import { BundleMDXSource, MDXExport } from 'mdx-bundler/dist/types';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { join } from 'path';
 import { ParsedUrlQuery } from 'querystring';
@@ -20,6 +19,7 @@ interface IArticleProps {
 
 const Article = ({ code, frontmatter }: IArticleProps) => {
   const MDXComponent = useMemo(() => getMDXComponent(code), [code]);
+
   return <MDXComponent />;
 };
 
@@ -47,16 +47,11 @@ export const getStaticProps: GetStaticProps<
   });
 
   const { code, frontmatter } = mdxSource;
-  console.log(frontmatter);
 
   return {
     props: {
-      // title: frontmatter.title,
-      // category: frontmatter.category,
-      // date: frontmatter.date,
       code,
       frontmatter,
-      // description: frontmatter?.description || '',
     },
   };
 };
