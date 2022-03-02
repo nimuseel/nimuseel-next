@@ -11,6 +11,7 @@ const Header = styled.header`
   z-index: 999;
   padding: 20px 40px;
   border-bottom: 1px solid rgba(0, 0, 0, 5%);
+  background-color: white;
 
   .logo {
     color: black;
