@@ -1,25 +1,14 @@
 import { GetServerSideProps } from 'next';
-import Link from 'next/link';
 import React from 'react';
+import ArticleList from '../components/ArticleList';
+import IArticle from '../interfaces/articles';
 import { getArticles, getCategories } from '../lib/api';
 
-function Home({
-  articles,
-  categories,
-}: {
-  articles: any;
-  categories: string[];
-}): JSX.Element {
+function Home({ articles }: { articles: IArticle[] }): JSX.Element {
   return (
-    <div>
-      {articles?.map(({ category, slug, title, date }) => {
-        return (
-          <Link href={`/article/${category}/${slug}`} key={slug}>
-            <a title={title}>{title}</a>
-          </Link>
-        );
-      })}
-    </div>
+    <>
+      <ArticleList articles={articles} />
+    </>
   );
 }
 
@@ -30,7 +19,7 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
     (query?.category as string) || undefined;
 
   const articles = getArticles(
-    ['title', 'slug', 'category', 'date'],
+    ['title', 'slug', 'category', 'date', 'description'],
     filteredCategory,
   );
   const categories = getCategories();
