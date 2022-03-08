@@ -14,11 +14,7 @@ const ArticleList = ({ articles }: IArticleListProps) => {
         return (
           <Link href={`/article/${category}/${slug}`} key={slug}>
             <S.ArticleWrapper>
-              <S.DateAndCategory>
-                <span>{date}</span>
-                <S.Divider />
-                <span>{category}</span>
-              </S.DateAndCategory>
+              <S.PublishedAt>{date}</S.PublishedAt>
               <S.Title>{title}</S.Title>
               <S.Description>{description}</S.Description>
             </S.ArticleWrapper>

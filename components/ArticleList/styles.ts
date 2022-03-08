@@ -14,21 +14,9 @@ const ArticleWrapper = styled.div`
   }
 `;
 
-const DateAndCategory = styled.div`
-  display: flex;
-  align-items: center;
-
-  span {
-    font-size: 14px;
-    color: #36454f;
-  }
-`;
-
-const Divider = styled.div`
-  height: 12px;
-  width: 1px;
-  background-color: rgba(0, 0, 0, 20%);
-  margin: 0 12px;
+const PublishedAt = styled.span`
+  font-size: 14px;
+  color: #36454f;
 `;
 
 const Title = styled.h2`
@@ -42,8 +30,7 @@ const Description = styled.span`
 
 export default {
   ArticleWrapper,
-  DateAndCategory,
-  Divider,
+  PublishedAt,
   Title,
   Description,
 };
