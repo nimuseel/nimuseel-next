@@ -4,11 +4,13 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { join } from 'path';
 import { ParsedUrlQuery } from 'querystring';
 import React, { useMemo } from 'react';
+import { remarkMdxImages } from 'remark-mdx-images';
 import {
   articlesDirectory,
   getArticleBySlug,
   getArticles,
 } from '../../lib/api';
+import { MDXComponents } from '../../lib/mdxComponents';
 
 interface IArticleProps {
   code: string;
@@ -20,7 +22,7 @@ interface IArticleProps {
 const Article = ({ code, frontmatter }: IArticleProps) => {
   const MDXComponent = useMemo(() => getMDXComponent(code), [code]);
 
-  return <MDXComponent />;
+  return <MDXComponent components={MDXComponents} />;
 };
 
 export default Article;
@@ -42,11 +44,32 @@ export const getStaticProps: GetStaticProps<
     'description',
   ]);
 
-  const mdxSource = await bundleMDX({
+  /*const mdxSource = await bundleMDX({
     source: article.content,
+  });*/
+
+  const { code, frontmatter } = await bundleMDX({
+    source: article.content,
+    cwd: `${articlesDirectory}/public/images`,
+    xdmOptions: (options) => {
+      options.remarkPlugins = [
+        ...(options.remarkPlugins ?? []),
+        remarkMdxImages,
+      ];
+
+      return options;
+    },
+    esbuildOptions: (options) => {
+      options.loader = {
+        ...options.loader,
+        '.png': 'dataurl',
+      };
+
+      return options;
+    },
   });
 
-  const { code, frontmatter } = mdxSource;
+  // const { code, frontmatter } = mdxSource;
 
   return {
     props: {

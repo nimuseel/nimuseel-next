@@ -58,6 +58,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier", "npm:2.5.1"],\
             ["react", "npm:17.0.2"],\
             ["react-dom", "virtual:bbc26d7555c5a7e86b93b0767815c85a7335a1cadc4b41cf58cf87ce5f1dfdfff95f71e037a32d69fd1420289a3f493406ae95b93c1fe9eddbcd466e0c887469#npm:17.0.2"],\
+            ["remark-mdx-images", "npm:1.0.3"],\
             ["sass", "npm:1.49.7"],\
             ["typescript", "patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=bda367"]\
           ],\
@@ -5626,6 +5627,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier", "npm:2.5.1"],\
             ["react", "npm:17.0.2"],\
             ["react-dom", "virtual:bbc26d7555c5a7e86b93b0767815c85a7335a1cadc4b41cf58cf87ce5f1dfdfff95f71e037a32d69fd1420289a3f493406ae95b93c1fe9eddbcd466e0c887469#npm:17.0.2"],\
+            ["remark-mdx-images", "npm:1.0.3"],\
             ["sass", "npm:1.49.7"],\
             ["typescript", "patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=bda367"]\
           ],\
@@ -6302,6 +6304,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["estree-util-value-to-estree", "npm:1.3.0"],\
             ["js-yaml", "npm:4.1.0"],\
             ["toml", "npm:3.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["remark-mdx-images", [\
+        ["npm:1.0.3", {\
+          "packageLocation": "./.yarn/cache/remark-mdx-images-npm-1.0.3-86018af06d-a3205e6e76.zip/node_modules/remark-mdx-images/",\
+          "packageDependencies": [\
+            ["remark-mdx-images", "npm:1.0.3"],\
+            ["unist-util-visit", "npm:2.0.3"]\
           ],\
           "linkType": "HARD"\
         }]\

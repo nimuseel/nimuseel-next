@@ -4632,6 +4632,7 @@ __metadata:
     prettier: ^2.5.1
     react: 17.0.2
     react-dom: 17.0.2
+    remark-mdx-images: ^1.0.3
     sass: ^1.49.7
     typescript: 4.5.5
   languageName: unknown
@@ -5190,6 +5191,15 @@ __metadata:
     js-yaml: ^4.0.0
     toml: ^3.0.0
   checksum: a2d87e0d6cc7f541f7c854270e740da3bb403ee0398414aa77ee17df157853b692072eaff6242d439c20bf416c80908fdf44096771e25bfefd30e3463dace5e7
+  languageName: node
+  linkType: hard
+
+"remark-mdx-images@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "remark-mdx-images@npm:1.0.3"
+  dependencies:
+    unist-util-visit: ^2.0.0
+  checksum: a3205e6e762cb1cc1abb084fedbaf63adbab56cb30df5c5719bc3ed14b1e858ca9a8abc77d3c910bce57a43fd6dfe4b386e36ecd7e930fc607d99a44b1b97eef
   languageName: node
   linkType: hard
 
