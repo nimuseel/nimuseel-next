@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import React from 'react';
 import '../styles/global.scss';
 import ContentLayout from '../components/ContentLayout';
+import { Footer } from '../components/Footer';
 import { Header } from '../components/Header';
 import MainLayout from '../components/MainLayout';
 
@@ -20,6 +21,8 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       ) : (
         <MainLayout>
           <Component {...pageProps} />
+
+          <Footer />
         </MainLayout>
       )}
     </>
