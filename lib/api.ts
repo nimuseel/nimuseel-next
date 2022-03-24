@@ -1,8 +1,8 @@
 import fs from 'fs';
-import { basename, join } from 'path';
-import matter from 'gray-matter';
-import * as process from 'process';
 import glob from 'glob';
+import matter from 'gray-matter';
+import { basename, join } from 'path';
+import * as process from 'process';
 
 export const articlesDirectory = join(process.cwd(), 'articles');
 
@@ -36,9 +36,7 @@ export function getArticleBySlug(path: string, fields: string[] = []) {
 function getAbsoluteArticles(directory: string, category?: string) {
   const categoryGlobPattern = category == null ? '**' : category;
 
-  const files = glob.sync(`${directory}/${categoryGlobPattern}/*.mdx`);
-
-  return files;
+  return glob.sync(`${directory}/${categoryGlobPattern}/*.mdx`);
 }
 
 export function getArticles(fields: string[] = [], category?: string) {
@@ -46,7 +44,7 @@ export function getArticles(fields: string[] = [], category?: string) {
   const articles = paths
     .map((path) => getArticleBySlug(path, fields))
     .sort((article1: { date: string }, article2: { date: string }) => {
-      return article1.date > article2.date ? -1 : 1;
+      return article1.date > article2.date ? 1 : -1;
     });
 
   return articles;
