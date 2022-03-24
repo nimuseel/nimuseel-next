@@ -54,6 +54,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gray-matter", "npm:4.0.3"],\
             ["mdx-bundler", "virtual:bbc26d7555c5a7e86b93b0767815c85a7335a1cadc4b41cf58cf87ce5f1dfdfff95f71e037a32d69fd1420289a3f493406ae95b93c1fe9eddbcd466e0c887469#npm:8.0.1"],\
             ["next", "virtual:bbc26d7555c5a7e86b93b0767815c85a7335a1cadc4b41cf58cf87ce5f1dfdfff95f71e037a32d69fd1420289a3f493406ae95b93c1fe9eddbcd466e0c887469#npm:12.0.10"],\
+            ["next-seo", "virtual:bbc26d7555c5a7e86b93b0767815c85a7335a1cadc4b41cf58cf87ce5f1dfdfff95f71e037a32d69fd1420289a3f493406ae95b93c1fe9eddbcd466e0c887469#npm:5.2.0"],\
             ["path", "npm:0.12.7"],\
             ["prettier", "npm:2.5.1"],\
             ["react", "npm:17.0.2"],\
@@ -5597,6 +5598,36 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["next-seo", [\
+        ["npm:5.2.0", {\
+          "packageLocation": "./.yarn/cache/next-seo-npm-5.2.0-fbb6802ffa-392f0b4b9d.zip/node_modules/next-seo/",\
+          "packageDependencies": [\
+            ["next-seo", "npm:5.2.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:bbc26d7555c5a7e86b93b0767815c85a7335a1cadc4b41cf58cf87ce5f1dfdfff95f71e037a32d69fd1420289a3f493406ae95b93c1fe9eddbcd466e0c887469#npm:5.2.0", {\
+          "packageLocation": "./.yarn/__virtual__/next-seo-virtual-7ffbb9cc64/0/cache/next-seo-npm-5.2.0-fbb6802ffa-392f0b4b9d.zip/node_modules/next-seo/",\
+          "packageDependencies": [\
+            ["next-seo", "virtual:bbc26d7555c5a7e86b93b0767815c85a7335a1cadc4b41cf58cf87ce5f1dfdfff95f71e037a32d69fd1420289a3f493406ae95b93c1fe9eddbcd466e0c887469#npm:5.2.0"],\
+            ["@types/next", null],\
+            ["@types/react", "npm:17.0.38"],\
+            ["@types/react-dom", null],\
+            ["next", "virtual:bbc26d7555c5a7e86b93b0767815c85a7335a1cadc4b41cf58cf87ce5f1dfdfff95f71e037a32d69fd1420289a3f493406ae95b93c1fe9eddbcd466e0c887469#npm:12.0.10"],\
+            ["react", "npm:17.0.2"],\
+            ["react-dom", "virtual:bbc26d7555c5a7e86b93b0767815c85a7335a1cadc4b41cf58cf87ce5f1dfdfff95f71e037a32d69fd1420289a3f493406ae95b93c1fe9eddbcd466e0c887469#npm:17.0.2"]\
+          ],\
+          "packagePeers": [\
+            "@types/next",\
+            "@types/react-dom",\
+            "@types/react",\
+            "next",\
+            "react-dom",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["nimuseel-next", [\
         ["workspace:.", {\
           "packageLocation": "./",\
@@ -5623,6 +5654,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gray-matter", "npm:4.0.3"],\
             ["mdx-bundler", "virtual:bbc26d7555c5a7e86b93b0767815c85a7335a1cadc4b41cf58cf87ce5f1dfdfff95f71e037a32d69fd1420289a3f493406ae95b93c1fe9eddbcd466e0c887469#npm:8.0.1"],\
             ["next", "virtual:bbc26d7555c5a7e86b93b0767815c85a7335a1cadc4b41cf58cf87ce5f1dfdfff95f71e037a32d69fd1420289a3f493406ae95b93c1fe9eddbcd466e0c887469#npm:12.0.10"],\
+            ["next-seo", "virtual:bbc26d7555c5a7e86b93b0767815c85a7335a1cadc4b41cf58cf87ce5f1dfdfff95f71e037a32d69fd1420289a3f493406ae95b93c1fe9eddbcd466e0c887469#npm:5.2.0"],\
             ["path", "npm:0.12.7"],\
             ["prettier", "npm:2.5.1"],\
             ["react", "npm:17.0.2"],\

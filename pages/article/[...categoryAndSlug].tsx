@@ -1,6 +1,7 @@
 import { bundleMDX } from 'mdx-bundler';
 import { getMDXComponent } from 'mdx-bundler/client';
 import { GetStaticPaths, GetStaticProps } from 'next';
+import { NextSeo } from 'next-seo';
 import { join } from 'path';
 import { ParsedUrlQuery } from 'querystring';
 import React, { useMemo } from 'react';
@@ -17,12 +18,19 @@ interface IArticleProps {
   frontmatter: {
     [key: string]: any;
   };
+  title: string;
+  description: string;
 }
 
-const Article = ({ code, frontmatter }: IArticleProps) => {
+const Article = ({ code, frontmatter, ...rest }: IArticleProps) => {
   const MDXComponent = useMemo(() => getMDXComponent(code), [code]);
 
-  return <MDXComponent components={MDXComponents} />;
+  return (
+    <>
+      <NextSeo title={rest.title} description={rest.description} />
+      <MDXComponent components={MDXComponents} />
+    </>
+  );
 };
 
 export default Article;
@@ -43,10 +51,6 @@ export const getStaticProps: GetStaticProps<
     'content',
     'description',
   ]);
-
-  /*const mdxSource = await bundleMDX({
-    source: article.content,
-  });*/
 
   const { code, frontmatter } = await bundleMDX({
     source: article.content,
@@ -69,12 +73,12 @@ export const getStaticProps: GetStaticProps<
     },
   });
 
-  // const { code, frontmatter } = mdxSource;
-
   return {
     props: {
       code,
       frontmatter,
+      title: 'nimuseel | ' + article.title,
+      description: article.description,
     },
   };
 };
