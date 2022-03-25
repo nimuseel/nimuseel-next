@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import IArticle from '../../interfaces/articles';
+import IArticle from '../../../interfaces/articles';
 import S from './styles';
 
 interface IArticleListProps {
