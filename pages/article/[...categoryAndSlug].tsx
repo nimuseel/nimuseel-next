@@ -6,6 +6,7 @@ import { join } from 'path';
 import { ParsedUrlQuery } from 'querystring';
 import React, { useMemo } from 'react';
 import { remarkMdxImages } from 'remark-mdx-images';
+import { ArticleComments } from '../../components/Article/ArticleComments';
 import {
   articlesDirectory,
   getArticleBySlug,
@@ -22,13 +23,14 @@ interface IArticleProps {
   description: string;
 }
 
-const Article = ({ code, frontmatter, ...rest }: IArticleProps) => {
+const Article = ({ code, ...rest }: IArticleProps) => {
   const MDXComponent = useMemo(() => getMDXComponent(code), [code]);
 
   return (
     <>
       <NextSeo title={rest.title} description={rest.description} />
       <MDXComponent components={MDXComponents} />
+      <ArticleComments />
     </>
   );
 };

@@ -1,6 +1,6 @@
 import { GetServerSideProps } from 'next';
 import React from 'react';
-import ArticleList from '../components/ArticleList';
+import ArticleList from '../components/Article/ArticleList';
 import IArticle from '../interfaces/articles';
 import { getArticles, getCategories } from '../lib/api';
 
