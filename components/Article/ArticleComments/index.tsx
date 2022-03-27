@@ -16,9 +16,7 @@ export const ArticleComments = () => {
     };
 
     Object.entries(utterancesConfig).forEach(([key, value]) => {
-      if (typeof value === 'string') {
-        utterances.setAttribute(key, value);
-      }
+      utterances.setAttribute(key, value.toString());
     });
 
     ref.current.appendChild(utterances);
