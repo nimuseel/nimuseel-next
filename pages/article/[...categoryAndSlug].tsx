@@ -33,7 +33,7 @@ const Article = ({ code, ...rest }: IArticleProps) => {
     <>
       <NextSeo title={rest.seo} description={rest.description} />
       <ArticleTitle title={rest.title} date={rest.date} />
-      <MDXComponent components={MDXComponents} />
+      <MDXComponent components={MDXComponents as any} />
       <ArticleComments />
     </>
   );
