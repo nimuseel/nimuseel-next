@@ -3,7 +3,7 @@ interface CareerProject {
   period: string;
   description: string;
   details: string[];
-  skills: string[];
+  skills: string;
 }
 
 export default interface ICareerItem {
