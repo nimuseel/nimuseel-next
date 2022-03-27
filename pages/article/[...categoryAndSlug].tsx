@@ -21,6 +21,8 @@ interface IArticleProps {
   };
   title: string;
   description: string;
+  seo: string;
+  date: string;
 }
 
 const Article = ({ code, ...rest }: IArticleProps) => {
@@ -28,7 +30,12 @@ const Article = ({ code, ...rest }: IArticleProps) => {
 
   return (
     <>
-      <NextSeo title={rest.title} description={rest.description} />
+      <NextSeo title={rest.seo} description={rest.description} />
+      <h1 style={{ textAlign: 'center', marginTop: 0, marginBottom: 32 }}>
+        {rest.title}
+        <br />
+        <span style={{ fontSize: 14 }}>{rest.date}</span>
+      </h1>
       <MDXComponent components={MDXComponents} />
       <ArticleComments />
     </>
@@ -79,8 +86,10 @@ export const getStaticProps: GetStaticProps<
     props: {
       code,
       frontmatter,
-      title: 'nimuseel | ' + article.title,
+      title: article.title,
+      seo: 'nimuseel | ' + article.title,
       description: article.description,
+      date: article.date,
     },
   };
 };
