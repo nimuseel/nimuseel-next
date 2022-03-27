@@ -9,7 +9,20 @@
 * {
   font-family: 'Pretendard Variable', 'Apple SD Gothic Neo', sans-serif;
   line-height: 28px;
-  color: #212529;
+  color: #475569;
+  word-break: keep-all;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.3rem;
 }
 
 h1,
@@ -20,6 +33,11 @@ h5,
 h6,
 strong {
   color: #000;
+}
+
+ul,
+ol {
+  padding-left: 1rem;
 }
 
 a {

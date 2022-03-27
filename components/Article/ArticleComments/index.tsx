@@ -16,7 +16,7 @@ export const ArticleComments = () => {
     };
 
     Object.entries(utterancesConfig).forEach(([key, value]) => {
-      utterances.setAttribute(key, value);
+      utterances.setAttribute(key, value.toString());
     });
 
     ref.current.appendChild(utterances);

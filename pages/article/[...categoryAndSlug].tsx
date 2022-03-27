@@ -7,6 +7,7 @@ import { ParsedUrlQuery } from 'querystring';
 import React, { useMemo } from 'react';
 import { remarkMdxImages } from 'remark-mdx-images';
 import { ArticleComments } from '../../components/Article/ArticleComments';
+import { ArticleTitle } from '../../components/Article/ArticleTitle';
 import {
   articlesDirectory,
   getArticleBySlug,
@@ -21,14 +22,17 @@ interface IArticleProps {
   };
   title: string;
   description: string;
+  seo: string;
+  date: string;
 }
 
-const Article = ({ code, frontmatter, ...rest }: IArticleProps) => {
+const Article = ({ code, ...rest }: IArticleProps) => {
   const MDXComponent = useMemo(() => getMDXComponent(code), [code]);
 
   return (
     <>
-      <NextSeo title={rest.title} description={rest.description} />
+      <NextSeo title={rest.seo} description={rest.description} />
+      <ArticleTitle title={rest.title} date={rest.date} />
       <MDXComponent components={MDXComponents} />
       <ArticleComments />
     </>
@@ -79,8 +83,10 @@ export const getStaticProps: GetStaticProps<
     props: {
       code,
       frontmatter,
-      title: 'nimuseel | ' + article.title,
+      title: article.title,
+      seo: 'nimuseel | ' + article.title,
       description: article.description,
+      date: article.date,
     },
   };
 };
