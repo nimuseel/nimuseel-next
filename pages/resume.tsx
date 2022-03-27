@@ -1,4 +1,5 @@
 import React from 'react';
+import { Career } from '../components/Resume/Career';
 import { Introduce } from '../components/Resume/Introduce';
 import { ResumeLayout } from '../components/ResumeLayout';
 
@@ -6,6 +7,7 @@ const Resume = () => {
   return (
     <ResumeLayout>
       <Introduce />
+      <Career />
     </ResumeLayout>
   );
 };
