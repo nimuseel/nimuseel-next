@@ -7,6 +7,7 @@ import { ParsedUrlQuery } from 'querystring';
 import React, { useMemo } from 'react';
 import { remarkMdxImages } from 'remark-mdx-images';
 import { ArticleComments } from '../../components/Article/ArticleComments';
+import { ArticleTitle } from '../../components/Article/ArticleTitle';
 import {
   articlesDirectory,
   getArticleBySlug,
@@ -31,11 +32,7 @@ const Article = ({ code, ...rest }: IArticleProps) => {
   return (
     <>
       <NextSeo title={rest.seo} description={rest.description} />
-      <h1 style={{ textAlign: 'center', marginTop: 0, marginBottom: 32 }}>
-        {rest.title}
-        <br />
-        <span style={{ fontSize: 14 }}>{rest.date}</span>
-      </h1>
+      <ArticleTitle title={rest.title} date={rest.date} />
       <MDXComponent components={MDXComponents} />
       <ArticleComments />
     </>
