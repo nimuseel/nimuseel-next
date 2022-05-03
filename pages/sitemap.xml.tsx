@@ -4,10 +4,7 @@ import fs from 'fs';
 const Sitemap = () => {};
 
 export const getServerSideProps = ({ res }) => {
-  const baseUrl = {
-    development: 'http://localhost:3000',
-    production: 'https://nimuseel.dev',
-  }[process.env.NODE_ENV];
+  const baseUrl = 'https://www.nimuseel.dev';
 
   console.log(baseUrl);
 
