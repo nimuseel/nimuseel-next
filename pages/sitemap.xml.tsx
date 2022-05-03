@@ -1,5 +1,6 @@
 import fs from 'fs';
 import { GetServerSideProps } from 'next';
+import { join } from 'path';
 import { getArticles } from '../lib/api';
 
 const Sitemap = () => {
@@ -9,8 +10,10 @@ const Sitemap = () => {
 export const getServerSideProps: GetServerSideProps = async ({ res }) => {
   const baseUrl = 'https://www.nimuseel.dev';
 
+  const pagesDirectory = join(process.cwd(), 'pages');
+
   const staticPages = fs
-    .readdirSync('pages')
+    .readdirSync(pagesDirectory)
     .filter((staticPage) => {
       return ![
         '_app.tsx',
