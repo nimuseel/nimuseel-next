@@ -9,6 +9,8 @@ export const getServerSideProps = ({ res }) => {
     production: 'https://nimuseel.dev',
   }[process.env.NODE_ENV];
 
+  console.log(baseUrl);
+
   const staticPages = fs
     .readdirSync('pages')
     .filter((staticPage) => {

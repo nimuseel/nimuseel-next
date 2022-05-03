@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { bundleMDX } from 'mdx-bundler';
 import { getMDXComponent } from 'mdx-bundler/client';
 import { GetStaticPaths, GetStaticProps } from 'next';
