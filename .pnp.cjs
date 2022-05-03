@@ -39,6 +39,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@mdx-js/react", "virtual:bbc26d7555c5a7e86b93b0767815c85a7335a1cadc4b41cf58cf87ce5f1dfdfff95f71e037a32d69fd1420289a3f493406ae95b93c1fe9eddbcd466e0c887469#npm:1.6.22"],\
             ["@next/mdx", "virtual:bbc26d7555c5a7e86b93b0767815c85a7335a1cadc4b41cf58cf87ce5f1dfdfff95f71e037a32d69fd1420289a3f493406ae95b93c1fe9eddbcd466e0c887469#npm:12.0.10"],\
             ["@types/glob", "npm:7.2.0"],\
+            ["@types/node", "npm:17.0.31"],\
             ["@types/react", "npm:17.0.38"],\
             ["@typescript-eslint/eslint-plugin", "virtual:bbc26d7555c5a7e86b93b0767815c85a7335a1cadc4b41cf58cf87ce5f1dfdfff95f71e037a32d69fd1420289a3f493406ae95b93c1fe9eddbcd466e0c887469#npm:5.10.2"],\
             ["@typescript-eslint/parser", "virtual:bbc26d7555c5a7e86b93b0767815c85a7335a1cadc4b41cf58cf87ce5f1dfdfff95f71e037a32d69fd1420289a3f493406ae95b93c1fe9eddbcd466e0c887469#npm:5.10.2"],\
@@ -1220,6 +1221,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "../../.yarn/berry/cache/@types-node-npm-17.0.18-a816928b08-8.zip/node_modules/@types/node/",\
           "packageDependencies": [\
             ["@types/node", "npm:17.0.18"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:17.0.31", {\
+          "packageLocation": "../../.yarn/berry/cache/@types-node-npm-17.0.31-d8d26aa013-8.zip/node_modules/@types/node/",\
+          "packageDependencies": [\
+            ["@types/node", "npm:17.0.31"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5641,6 +5649,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@mdx-js/react", "virtual:bbc26d7555c5a7e86b93b0767815c85a7335a1cadc4b41cf58cf87ce5f1dfdfff95f71e037a32d69fd1420289a3f493406ae95b93c1fe9eddbcd466e0c887469#npm:1.6.22"],\
             ["@next/mdx", "virtual:bbc26d7555c5a7e86b93b0767815c85a7335a1cadc4b41cf58cf87ce5f1dfdfff95f71e037a32d69fd1420289a3f493406ae95b93c1fe9eddbcd466e0c887469#npm:12.0.10"],\
             ["@types/glob", "npm:7.2.0"],\
+            ["@types/node", "npm:17.0.31"],\
             ["@types/react", "npm:17.0.38"],\
             ["@typescript-eslint/eslint-plugin", "virtual:bbc26d7555c5a7e86b93b0767815c85a7335a1cadc4b41cf58cf87ce5f1dfdfff95f71e037a32d69fd1420289a3f493406ae95b93c1fe9eddbcd466e0c887469#npm:5.10.2"],\
             ["@typescript-eslint/parser", "virtual:bbc26d7555c5a7e86b93b0767815c85a7335a1cadc4b41cf58cf87ce5f1dfdfff95f71e037a32d69fd1420289a3f493406ae95b93c1fe9eddbcd466e0c887469#npm:5.10.2"],\

@@ -901,6 +901,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:^17.0.31":
+  version: 17.0.31
+  resolution: "@types/node@npm:17.0.31"
+  checksum: 704618350f8420d5c47db0f7778398e821b7724369946f5c441a7e6b9343295553936400eb8309f0b07d5e39c240988ab3456b983712ca86265dabc9aee4ad3d
+  languageName: node
+  linkType: hard
+
 "@types/parse-json@npm:^4.0.0":
   version: 4.0.0
   resolution: "@types/parse-json@npm:4.0.0"
@@ -4624,6 +4631,7 @@ __metadata:
     "@mdx-js/react": ^1.6.22
     "@next/mdx": ^12.0.8
     "@types/glob": ^7
+    "@types/node": ^17.0.31
     "@types/react": 17.0.38
     "@typescript-eslint/eslint-plugin": ^5.10.2
     "@typescript-eslint/parser": ^5.10.2
