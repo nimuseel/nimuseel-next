@@ -818,6 +818,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/globby@npm:^9.1.0":
+  version: 9.1.0
+  resolution: "@types/globby@npm:9.1.0"
+  dependencies:
+    globby: "*"
+  checksum: 947ce406cd093771aee381279649db1380da5361225b3cd0517a43d7c5acef8a28720acead7fe4345bac9b2f038781674eb43ab3f83636ff6db79d496c517150
+  languageName: node
+  linkType: hard
+
 "@types/hast@npm:^2.0.0":
   version: 2.3.4
   resolution: "@types/hast@npm:2.3.4"
@@ -2606,7 +2615,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-glob@npm:^3.2.9":
+"fast-glob@npm:^3.2.11, fast-glob@npm:^3.2.9":
   version: 3.2.11
   resolution: "fast-glob@npm:3.2.11"
   dependencies:
@@ -2885,6 +2894,19 @@ __metadata:
   dependencies:
     type-fest: ^0.20.2
   checksum: cf7877629c8f2a293b0a7d09d1dcce7f2d426ec2528600c481c5b3f3d070b0a120eb2499439ac0404990fb8a5742c0165b1bf1f52603364001ddc89bea3dda24
+  languageName: node
+  linkType: hard
+
+"globby@npm:*, globby@npm:^13.1.1":
+  version: 13.1.1
+  resolution: "globby@npm:13.1.1"
+  dependencies:
+    dir-glob: ^3.0.1
+    fast-glob: ^3.2.11
+    ignore: ^5.2.0
+    merge2: ^1.4.1
+    slash: ^4.0.0
+  checksum: e6c43409c6c31b374fbd1c01a8c1811de52336928be9c697e472d2a89a156c9cbf1fb33863755c0447b4db16485858aa57f16628d66a6b7c7131669c9fbe76cd
   languageName: node
   linkType: hard
 
@@ -4631,6 +4653,7 @@ __metadata:
     "@mdx-js/react": ^1.6.22
     "@next/mdx": ^12.0.8
     "@types/glob": ^7
+    "@types/globby": ^9.1.0
     "@types/node": ^17.0.31
     "@types/react": 17.0.38
     "@typescript-eslint/eslint-plugin": ^5.10.2
@@ -4644,6 +4667,7 @@ __metadata:
     eslint-plugin-react: ^7.28.0
     fs: ^0.0.1-security
     glob: ^7.2.0
+    globby: ^13.1.1
     gray-matter: ^4.0.3
     mdx-bundler: ^8.0.1
     next: latest
@@ -5542,6 +5566,13 @@ __metadata:
   version: 3.0.0
   resolution: "slash@npm:3.0.0"
   checksum: 94a93fff615f25a999ad4b83c9d5e257a7280c90a32a7cb8b4a87996e4babf322e469c42b7f649fd5796edd8687652f3fb452a86dc97a816f01113183393f11c
+  languageName: node
+  linkType: hard
+
+"slash@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "slash@npm:4.0.0"
+  checksum: da8e4af73712253acd21b7853b7e0dbba776b786e82b010a5bfc8b5051a1db38ed8aba8e1e8f400dd2c9f373be91eb1c42b66e91abb407ff42b10feece5e1d2d
   languageName: node
   linkType: hard
 

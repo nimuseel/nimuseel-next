@@ -1,4 +1,5 @@
 import fs from 'fs';
+import * as globby from 'globby';
 import { GetServerSideProps } from 'next';
 import { join } from 'path';
 import { getArticles } from '../lib/api';
@@ -12,8 +13,21 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
 
   const pagesDirectory = join(process.cwd(), 'pages');
 
-  const staticPages = fs
-    .readdirSync(pagesDirectory)
+  const includedFiles = ['**/*.tsx', '*.tsx'].map(
+    (i) => `${pagesDirectory}/${i}`,
+  );
+  const excludedFiles = [
+    '_app.tsx',
+    '_document.tsx',
+    'api/*',
+    'article/*',
+    'sitemap.xml.tsx',
+  ].map((i) => `!${pagesDirectory}/${i}`);
+
+  const staticPages = globby.globbySync([...includedFiles, ...excludedFiles]);
+
+  /*const staticPages = fs
+    .readdirSync('pages')
     .filter((staticPage) => {
       return ![
         '_app.tsx',
@@ -25,7 +39,7 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
     })
     .map((staticPagePath) => {
       return `${baseUrl}/${staticPagePath}`;
-    });
+    });*/
 
   const articles = getArticles(['category', 'slug']);
 

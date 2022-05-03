@@ -39,6 +39,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@mdx-js/react", "virtual:bbc26d7555c5a7e86b93b0767815c85a7335a1cadc4b41cf58cf87ce5f1dfdfff95f71e037a32d69fd1420289a3f493406ae95b93c1fe9eddbcd466e0c887469#npm:1.6.22"],\
             ["@next/mdx", "virtual:bbc26d7555c5a7e86b93b0767815c85a7335a1cadc4b41cf58cf87ce5f1dfdfff95f71e037a32d69fd1420289a3f493406ae95b93c1fe9eddbcd466e0c887469#npm:12.0.10"],\
             ["@types/glob", "npm:7.2.0"],\
+            ["@types/globby", "npm:9.1.0"],\
             ["@types/node", "npm:17.0.31"],\
             ["@types/react", "npm:17.0.38"],\
             ["@typescript-eslint/eslint-plugin", "virtual:bbc26d7555c5a7e86b93b0767815c85a7335a1cadc4b41cf58cf87ce5f1dfdfff95f71e037a32d69fd1420289a3f493406ae95b93c1fe9eddbcd466e0c887469#npm:5.10.2"],\
@@ -52,6 +53,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react", "virtual:bbc26d7555c5a7e86b93b0767815c85a7335a1cadc4b41cf58cf87ce5f1dfdfff95f71e037a32d69fd1420289a3f493406ae95b93c1fe9eddbcd466e0c887469#npm:7.28.0"],\
             ["fs", "npm:0.0.1-security"],\
             ["glob", "npm:7.2.0"],\
+            ["globby", "npm:13.1.1"],\
             ["gray-matter", "npm:4.0.3"],\
             ["mdx-bundler", "virtual:bbc26d7555c5a7e86b93b0767815c85a7335a1cadc4b41cf58cf87ce5f1dfdfff95f71e037a32d69fd1420289a3f493406ae95b93c1fe9eddbcd466e0c887469#npm:8.0.1"],\
             ["next", "virtual:bbc26d7555c5a7e86b93b0767815c85a7335a1cadc4b41cf58cf87ce5f1dfdfff95f71e037a32d69fd1420289a3f493406ae95b93c1fe9eddbcd466e0c887469#npm:12.0.10"],\
@@ -1119,6 +1121,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/glob", "npm:7.2.0"],\
             ["@types/minimatch", "npm:3.0.5"],\
             ["@types/node", "npm:17.0.18"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/globby", [\
+        ["npm:9.1.0", {\
+          "packageLocation": "../../.yarn/berry/cache/@types-globby-npm-9.1.0-9f00e62763-8.zip/node_modules/@types/globby/",\
+          "packageDependencies": [\
+            ["@types/globby", "npm:9.1.0"],\
+            ["globby", "npm:13.1.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -3699,6 +3711,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["slash", "npm:3.0.0"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:13.1.1", {\
+          "packageLocation": "../../.yarn/berry/cache/globby-npm-13.1.1-a7bbb4e577-8.zip/node_modules/globby/",\
+          "packageDependencies": [\
+            ["globby", "npm:13.1.1"],\
+            ["dir-glob", "npm:3.0.1"],\
+            ["fast-glob", "npm:3.2.11"],\
+            ["ignore", "npm:5.2.0"],\
+            ["merge2", "npm:1.4.1"],\
+            ["slash", "npm:4.0.0"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["got", [\
@@ -5649,6 +5673,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@mdx-js/react", "virtual:bbc26d7555c5a7e86b93b0767815c85a7335a1cadc4b41cf58cf87ce5f1dfdfff95f71e037a32d69fd1420289a3f493406ae95b93c1fe9eddbcd466e0c887469#npm:1.6.22"],\
             ["@next/mdx", "virtual:bbc26d7555c5a7e86b93b0767815c85a7335a1cadc4b41cf58cf87ce5f1dfdfff95f71e037a32d69fd1420289a3f493406ae95b93c1fe9eddbcd466e0c887469#npm:12.0.10"],\
             ["@types/glob", "npm:7.2.0"],\
+            ["@types/globby", "npm:9.1.0"],\
             ["@types/node", "npm:17.0.31"],\
             ["@types/react", "npm:17.0.38"],\
             ["@typescript-eslint/eslint-plugin", "virtual:bbc26d7555c5a7e86b93b0767815c85a7335a1cadc4b41cf58cf87ce5f1dfdfff95f71e037a32d69fd1420289a3f493406ae95b93c1fe9eddbcd466e0c887469#npm:5.10.2"],\
@@ -5662,6 +5687,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react", "virtual:bbc26d7555c5a7e86b93b0767815c85a7335a1cadc4b41cf58cf87ce5f1dfdfff95f71e037a32d69fd1420289a3f493406ae95b93c1fe9eddbcd466e0c887469#npm:7.28.0"],\
             ["fs", "npm:0.0.1-security"],\
             ["glob", "npm:7.2.0"],\
+            ["globby", "npm:13.1.1"],\
             ["gray-matter", "npm:4.0.3"],\
             ["mdx-bundler", "virtual:bbc26d7555c5a7e86b93b0767815c85a7335a1cadc4b41cf58cf87ce5f1dfdfff95f71e037a32d69fd1420289a3f493406ae95b93c1fe9eddbcd466e0c887469#npm:8.0.1"],\
             ["next", "virtual:bbc26d7555c5a7e86b93b0767815c85a7335a1cadc4b41cf58cf87ce5f1dfdfff95f71e037a32d69fd1420289a3f493406ae95b93c1fe9eddbcd466e0c887469#npm:12.0.10"],\
@@ -6662,6 +6688,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "../../.yarn/berry/cache/slash-npm-3.0.0-b87de2279a-8.zip/node_modules/slash/",\
           "packageDependencies": [\
             ["slash", "npm:3.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:4.0.0", {\
+          "packageLocation": "../../.yarn/berry/cache/slash-npm-4.0.0-ce4bbc4a80-8.zip/node_modules/slash/",\
+          "packageDependencies": [\
+            ["slash", "npm:4.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
