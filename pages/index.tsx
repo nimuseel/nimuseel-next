@@ -4,7 +4,7 @@ import ArticleList from '../components/Article/ArticleList';
 import IArticle from '../interfaces/articles';
 import { getArticles, getCategories } from '../lib/api';
 
-function Home({ articles }: { articles: IArticle[] }): JSX.Element {
+function Home({ articles }: { articles: IArticle[] }) {
   return (
     <>
       <ArticleList articles={articles} />
