@@ -1,4 +1,3 @@
-import fs from 'fs';
 import * as globby from 'globby';
 import { GetServerSideProps } from 'next';
 import { join } from 'path';
@@ -26,20 +25,13 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
 
   const staticPages = globby.globbySync([...includedFiles, ...excludedFiles]);
 
-  /*const staticPages = fs
-    .readdirSync('pages')
-    .filter((staticPage) => {
-      return ![
-        '_app.tsx',
-        '_document.tsx',
-        '_error.tsx',
-        'sitemap.xml.tsx',
-        'article',
-      ].includes(staticPage);
-    })
-    .map((staticPagePath) => {
-      return `${baseUrl}/${staticPagePath}`;
-    });*/
+  const staticPageUrls = staticPages.map((path) => {
+    const slug = path
+      .replace(pagesDirectory, '')
+      .replace('.tsx', '')
+      .replace(/\/index/g, '');
+    return `${baseUrl}${slug}`;
+  });
 
   const articles = getArticles(['category', 'slug']);
 
@@ -47,7 +39,7 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
     return `${baseUrl}/article/${article.category}/${article.slug}`;
   });
 
-  const allPaths = [...staticPages, ...articlePaths];
+  const allPaths = [...staticPageUrls, ...articlePaths];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
