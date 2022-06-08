@@ -13,3 +13,7 @@
 logs
 **/*.backup.*
 **/*.back.*
+
+
+# Contentlayer
+.contentlayer

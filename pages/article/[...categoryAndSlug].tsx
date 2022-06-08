@@ -1,39 +1,21 @@
-import { bundleMDX } from 'mdx-bundler';
-import { getMDXComponent } from 'mdx-bundler/client';
-import { GetStaticPaths, GetStaticProps } from 'next';
+import { InferGetStaticPropsType } from 'next';
+import { useMDXComponent } from 'next-contentlayer/hooks';
 import { NextSeo } from 'next-seo';
-import { join } from 'path';
-import { ParsedUrlQuery } from 'querystring';
-import React, { useMemo } from 'react';
-import { remarkMdxImages } from 'remark-mdx-images';
+import React from 'react';
+import { allArticles } from '../../.contentlayer/generated';
 import { ArticleComments } from '../../components/Article/ArticleComments';
 import { ArticleTitle } from '../../components/Article/ArticleTitle';
-import {
-  articlesDirectory,
-  getArticleBySlug,
-  getArticles,
-} from '../../lib/api';
-import { MDXComponents } from '../../lib/mdxComponents';
 
-interface IArticleProps {
-  code: string;
-  frontmatter: {
-    [key: string]: any;
-  };
-  title: string;
-  description: string;
-  seo: string;
-  date: string;
-}
-
-const Article = ({ code, ...rest }: IArticleProps) => {
-  const MDXComponent = useMemo(() => getMDXComponent(code), [code]);
+const Article = ({
+  article,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const MDXComponent = useMDXComponent(article.body.code);
 
   return (
     <>
-      <NextSeo title={rest.seo} description={rest.description} />
-      <ArticleTitle title={rest.title} date={rest.date} />
-      <MDXComponent components={MDXComponents} />
+      <NextSeo title={article.title} description={article.description} />
+      <ArticleTitle title={article.title} date={article.date} />
+      <MDXComponent />
       <ArticleComments />
     </>
   );
@@ -41,67 +23,25 @@ const Article = ({ code, ...rest }: IArticleProps) => {
 
 export default Article;
 
-type GetStaticPropsParams = ParsedUrlQuery & { categoryAndSlug: string[] };
-
-export const getStaticProps: GetStaticProps<
-  IArticleProps,
-  GetStaticPropsParams
-> = async ({ params }) => {
-  const [category, slug] = params.categoryAndSlug;
-  const path = join(articlesDirectory, category, `${slug}.mdx`);
-
-  const article = getArticleBySlug(path, [
-    'title',
-    'category',
-    'date',
-    'content',
-    'description',
-  ]);
-
-  const { code, frontmatter } = await bundleMDX({
-    source: article.content,
-    cwd: `${articlesDirectory}/public/images`,
-    xdmOptions: (options) => {
-      options.remarkPlugins = [
-        ...(options.remarkPlugins ?? []),
-        remarkMdxImages,
-      ];
-
-      return options;
-    },
-    esbuildOptions: (options) => {
-      options.loader = {
-        ...options.loader,
-        '.png': 'dataurl',
-      };
-
-      return options;
-    },
-  });
-
+export const getStaticPaths = async () => {
   return {
-    props: {
-      code,
-      frontmatter,
-      title: article.title,
-      seo: 'nimuseel | ' + article.title,
-      description: article.description,
-      date: article.date,
-    },
+    paths: allArticles.map((post) => ({
+      params: {
+        categoryAndSlug: [post.category, post._raw.flattenedPath.split('/')[1]],
+      },
+    })),
+    fallback: false,
   };
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const articles = getArticles(['category', 'slug']);
+export const getStaticProps = async ({ params }) => {
+  const article = allArticles.find((article) =>
+    article._raw.flattenedPath.includes(params.categoryAndSlug[1]),
+  );
 
   return {
-    paths: articles.map((article) => {
-      return {
-        params: {
-          categoryAndSlug: [article.category, article.slug],
-        },
-      };
-    }),
-    fallback: false,
+    props: {
+      article,
+    },
   };
 };
