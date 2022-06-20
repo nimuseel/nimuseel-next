@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import { Article } from '../../../.contentlayer/generated';
-import IArticle from '../../../interfaces/articles';
+import { format } from 'date-fns';
 import S from './styles';
 
 interface IArticleListProps {
@@ -9,7 +9,6 @@ interface IArticleListProps {
 }
 
 const ArticleList = ({ articles }: IArticleListProps) => {
-  console.log('11', articles);
   return (
     <>
       {articles.map((article) => {
@@ -19,7 +18,9 @@ const ArticleList = ({ articles }: IArticleListProps) => {
             key={article._id}
           >
             <S.ArticleWrapper>
-              <S.PublishedAt>{article.date}</S.PublishedAt>
+              <S.PublishedAt>
+                {format(new Date(article.date), 'yyyy년 MM월 dd일')}
+              </S.PublishedAt>
               <S.Title>{article.title}</S.Title>
               <S.Description>{article.description}</S.Description>
             </S.ArticleWrapper>
