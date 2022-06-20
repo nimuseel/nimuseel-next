@@ -4499,7 +4499,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-seo@npm:^5.2.0":
+"next-seo@npm:^5.4.0":
   version: 5.4.0
   resolution: "next-seo@npm:5.4.0"
   peerDependencies:
@@ -4613,7 +4613,7 @@ __metadata:
     js-yaml: ^4.1.0
     next: latest
     next-contentlayer: ^0.2.5
-    next-seo: ^5.2.0
+    next-seo: ^5.4.0
     next-sitemap: ^3.0.5
     path: ^0.12.7
     prettier: ^2.5.1
