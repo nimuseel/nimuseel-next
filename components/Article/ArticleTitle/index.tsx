@@ -1,4 +1,5 @@
 import React from 'react';
+import { format } from 'date-fns';
 import S from './styles';
 
 interface ArticleTitleProps {
@@ -11,7 +12,7 @@ export const ArticleTitle = ({ title, date }: ArticleTitleProps) => {
     <S.ArticleTitle>
       {title}
       <br />
-      <span className="date">{date}</span>
+      <span className="date">{format(new Date(date), 'yyyy년 MM월 dd일')}</span>
     </S.ArticleTitle>
   );
 };
