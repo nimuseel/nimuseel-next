@@ -11,7 +11,7 @@ export default Home;
 
 export const getStaticProps = async () => {
   const articles = allArticles.sort(
-    (a, b) => new Date(b.date).getUTCDate() - new Date(a.date).getUTCDate(),
+    (a, b) => +new Date(b.date) - +new Date(a.date),
   );
 
   return {
