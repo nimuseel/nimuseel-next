@@ -3,7 +3,6 @@ import styled from '@emotion/styled';
 const ArticleWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 12px 0;
 
   &:hover {
     cursor: pointer;
