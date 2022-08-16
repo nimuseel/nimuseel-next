@@ -14,7 +14,8 @@ export const careerList: ICareerItem[] = [
         description: '레몬베이스의 인트로 사이트를 리뉴얼 하였습니다.',
         details: [
           '자주, 혹은 공통적으로 사용되는 컴포넌트들을 분리하는 것에 집중하여 개발했습니다.',
-          'Context API를 사용해 프로젝트 내에서 공유할 데이터를 관리했습니다.',
+          'Context API를 사용해 도메인 내에서 글로벌하게 사용될 상태를 관리했습니다.',
+          'Safari 브라우저를 대응해, flex-box layout이 의도대로 동작할 수 있게 처리했습니다.'
         ],
         skills: 'React, Typescript, Emotion',
       },

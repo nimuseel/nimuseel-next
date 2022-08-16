@@ -23,7 +23,7 @@ export const Career = () => {
               <div>
                 <S.ProjectName>
                   {project.name}
-                  <span>{item.period}</span>
+                  <span>{project.period}</span>
                 </S.ProjectName>
 
                 <p>{project.description}</p>
