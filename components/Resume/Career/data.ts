@@ -9,13 +9,44 @@ export const careerList: ICareerItem[] = [
     period: '2021.11 ~ 현재',
     projects: [
       {
+        name: '레몬베이스 1:1 미팅, 목표 제품 개발',
+        period: '2022.06 ~',
+        description:
+          '레몬베이스의 1:1 미팅 기능과 목표 제품을 개발하고 있습니다.',
+        details: ['알림 설정 등의 신규 기능 개발', 'UI/UX 개선 등 제품 고도화'],
+        skills: 'React, TypeScript, Emotion',
+      },
+      {
+        name: '레몬베이스 디자인 시스템(LDS) 개발',
+        period: '2022.02 ~',
+        description:
+          '엔지니어와 디자이너간의 UI/UX적인 커뮤니케이션 미스를 줄이고, 고객에게 일관된 UI/UX 경험을 전달하고자 디자인 시스템을 개발하고 있습니다.',
+        details: [
+          'Ant Design의 Modal 컴포넌트를 기반으로 Confirm Modal 작업을 진행했습니다.',
+          '기존에 사용하고 있던 Ant Design Confrim Modal의 90% 이상을 LDS Confirm Modal로 대체했습니다.',
+        ],
+        skills: 'React, TypeScript, Emotion',
+      },
+      {
+        name: '레몬베이스 모바일 개발',
+        period: '2022.02 ~ 2022.05',
+        description: '레몬베이스 1:1 기능의 모바일 버전을 출시했습니다.',
+        details: [
+          'Expo(React Native)를 사용해 개발했습니다.',
+          '개발 당시, 빠르게 실행하고 관리가 용이한 React Native Webview를 활용해 모바일 앱을 개발했습니다.',
+          '특정 기능 단위로 끊어, 순차적 배포를 진행했습니다.',
+          'Expo에서 제공하는 OTA 기능의 존재를 인지하지 못해, develop환경의 코드가 production에 배포되는 문제가 생겨 Release Channel을 사용할 수 있는 환경을 구성했습니다.',
+        ],
+        skills: 'React Native WebView, React, TypeScript, Emotion',
+      },
+      {
         name: '레몬베이스 인트로 사이트 리뉴얼',
         period: '2021.12 ~ 2021.12',
         description: '레몬베이스의 인트로 사이트를 리뉴얼 하였습니다.',
         details: [
           '자주, 혹은 공통적으로 사용되는 컴포넌트들을 분리하는 것에 집중하여 개발했습니다.',
           'Context API를 사용해 도메인 내에서 글로벌하게 사용될 상태를 관리했습니다.',
-          'Safari 브라우저를 대응해, flex-box layout이 의도대로 동작할 수 있게 처리했습니다.'
+          'Safari 브라우저를 대응해, flex-box layout이 의도대로 동작할 수 있게 처리했습니다.',
         ],
         skills: 'React, Typescript, Emotion',
       },
