@@ -9,7 +9,7 @@ export const careerList: ICareerItem[] = [
     period: '2021.11 ~ 현재',
     projects: [
       {
-        name: '레몬베이스 1:1 미팅, 목표 제품 개발',
+        name: '레몬베이스 1:1 미팅, 목표 제품 개발(OneGoal Squad)',
         period: '2022.06 ~',
         description:
           '레몬베이스의 1:1 미팅 기능과 목표 제품을 개발하고 있습니다.',
@@ -17,7 +17,7 @@ export const careerList: ICareerItem[] = [
         skills: 'React, TypeScript, Emotion',
       },
       {
-        name: '레몬베이스 디자인 시스템(LDS) 개발',
+        name: '레몬베이스 디자인 시스템(LDS) 개발(LDS Guild)',
         period: '2022.02 ~',
         description:
           '엔지니어와 디자이너간의 UI/UX적인 커뮤니케이션 미스를 줄이고, 고객에게 일관된 UI/UX 경험을 전달하고자 디자인 시스템을 개발하고 있습니다.',
@@ -28,7 +28,7 @@ export const careerList: ICareerItem[] = [
         skills: 'React, TypeScript, Emotion',
       },
       {
-        name: '레몬베이스 모바일 개발',
+        name: '레몬베이스 모바일 개발(Growth Squad)',
         period: '2022.02 ~ 2022.05',
         description: '레몬베이스 1:1 기능의 모바일 버전을 출시했습니다.',
         details: [
