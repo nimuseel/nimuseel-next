@@ -5,6 +5,7 @@ import { careerList } from './data';
 import { ProjectInfo } from './ProjectInfo';
 import { ProjectList } from './ProjectList';
 import { ProjectSummary } from './ProjectSummary';
+import { Skills } from './Skills';
 import S from './styles';
 
 export const Career = () => {
@@ -20,10 +21,7 @@ export const Career = () => {
 
               <ProjectSummary project={project} />
 
-              <div>
-                <S.Skills>사용 기술</S.Skills>
-                <span>{project.skills}</span>
-              </div>
+              <Skills skills={project.skills} />
             </ProjectList>
           ))}
 
@@ -33,10 +31,7 @@ export const Career = () => {
 
               <ProjectSummary project={experience} />
 
-              <div>
-                <S.Skills>사용 기술</S.Skills>
-                <span>{experience.skills}</span>
-              </div>
+              <Skills skills={experience.skills} />
             </ProjectList>
           ))}
         </CareerContent>
