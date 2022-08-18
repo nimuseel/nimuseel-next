@@ -1,5 +1,6 @@
 import React from 'react';
 import { CareerContent } from './CareerContent';
+import { CompanyInfo } from './CompanyInfo';
 import { careerList } from './data';
 import { ProjectList } from './ProjectList';
 import S from './styles';
@@ -9,14 +10,7 @@ export const Career = () => {
     <S.CareerSection>
       {careerList.map((item) => (
         <CareerContent key={item.companyName}>
-          <S.CompanyName>
-            {item.companyName}
-            <span>{item.period}</span>
-          </S.CompanyName>
-
-          <S.Position>{item.position}</S.Position>
-
-          <p>{item.companyDescription}</p>
+          <CompanyInfo item={item} />
 
           {item.projects.map((project) => (
             <ProjectList key={project.name}>

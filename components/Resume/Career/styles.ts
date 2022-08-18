@@ -7,7 +7,7 @@ const CareerSection = styled.section`
   gap: 48px;
 `;
 
-const companyAndProjectPeriod = css`
+export const CompanyAndProjectPeriod = css`
   span {
     font-size: 14px;
     margin-left: 8px;
@@ -15,19 +15,10 @@ const companyAndProjectPeriod = css`
   }
 `;
 
-const CompanyName = styled.h2`
-  margin: 0;
-  ${companyAndProjectPeriod}
-`;
-
-const Position = styled.p`
-  margin-bottom: 8px;
-`;
-
 const ProjectName = styled.h3`
   margin: 0;
 
-  ${companyAndProjectPeriod}
+  ${CompanyAndProjectPeriod}
 `;
 
 const ProjectSummary = styled.p`
@@ -46,8 +37,6 @@ const Skills = styled.p`
 
 export default {
   CareerSection,
-  CompanyName,
-  Position,
   ProjectName,
   ProjectSummary,
   Skills,
