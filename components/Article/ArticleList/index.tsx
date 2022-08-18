@@ -1,4 +1,3 @@
-import { css } from '@emotion/react';
 import { Card } from '@nextui-org/react';
 import Link from 'next/link';
 import React from 'react';
