@@ -2,6 +2,7 @@ import React from 'react';
 import { CareerContent } from './CareerContent';
 import { CompanyInfo } from './CompanyInfo';
 import { careerList } from './data';
+import { ProjectInfo } from './ProjectInfo';
 import { ProjectList } from './ProjectList';
 import S from './styles';
 
@@ -14,14 +15,7 @@ export const Career = () => {
 
           {item.projects.map((project) => (
             <ProjectList key={project.name}>
-              <div>
-                <S.ProjectName>
-                  {project.name}
-                  <span>{project.period}</span>
-                </S.ProjectName>
-
-                <p>{project.description}</p>
-              </div>
+              <ProjectInfo project={project} />
 
               <div>
                 <S.ProjectSummary>작업 요약</S.ProjectSummary>
@@ -41,14 +35,7 @@ export const Career = () => {
 
           {item.experiences?.map((experience) => (
             <ProjectList key={experience.name}>
-              <div>
-                <S.ProjectName>
-                  {experience.name}
-                  <span>{experience.period}</span>
-                </S.ProjectName>
-
-                <p>{experience.description}</p>
-              </div>
+              <ProjectInfo project={experience} />
 
               <div>
                 <S.ProjectSummary>요약</S.ProjectSummary>

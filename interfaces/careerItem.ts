@@ -1,4 +1,4 @@
-interface CareerProject {
+export interface CareerProject {
   name: string;
   period: string;
   description: string;
@@ -6,7 +6,7 @@ interface CareerProject {
   skills: string;
 }
 
-export default interface ICareerItem {
+export interface ICareerItem {
   companyName: string;
   companyDescription: string;
   position: string;

@@ -1,4 +1,4 @@
-import ICareerItem from 'interfaces/careerItem';
+import { ICareerItem } from 'interfaces/careerItem';
 import React from 'react';
 import S from './styles';
 

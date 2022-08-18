@@ -15,12 +15,6 @@ export const CompanyAndProjectPeriod = css`
   }
 `;
 
-const ProjectName = styled.h3`
-  margin: 0;
-
-  ${CompanyAndProjectPeriod}
-`;
-
 const ProjectSummary = styled.p`
   margin: 0;
   font-size: 17px;
@@ -37,7 +31,6 @@ const Skills = styled.p`
 
 export default {
   CareerSection,
-  ProjectName,
   ProjectSummary,
   Skills,
 };

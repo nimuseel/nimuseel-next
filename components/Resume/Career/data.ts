@@ -1,4 +1,4 @@
-import ICareerItem from '../../../interfaces/careerItem';
+import { ICareerItem } from '../../../interfaces/careerItem';
 
 export const careerList: ICareerItem[] = [
   {
