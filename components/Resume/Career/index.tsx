@@ -4,6 +4,7 @@ import { CompanyInfo } from './CompanyInfo';
 import { careerList } from './data';
 import { ProjectInfo } from './ProjectInfo';
 import { ProjectList } from './ProjectList';
+import { ProjectSummary } from './ProjectSummary';
 import S from './styles';
 
 export const Career = () => {
@@ -17,14 +18,7 @@ export const Career = () => {
             <ProjectList key={project.name}>
               <ProjectInfo project={project} />
 
-              <div>
-                <S.ProjectSummary>작업 요약</S.ProjectSummary>
-                <ul>
-                  {project.details.map((details) => (
-                    <li key={details}>{details}</li>
-                  ))}
-                </ul>
-              </div>
+              <ProjectSummary project={project} />
 
               <div>
                 <S.Skills>사용 기술</S.Skills>
@@ -37,14 +31,7 @@ export const Career = () => {
             <ProjectList key={experience.name}>
               <ProjectInfo project={experience} />
 
-              <div>
-                <S.ProjectSummary>요약</S.ProjectSummary>
-                <ul>
-                  {experience.details.map((details) => (
-                    <li key={details}>{details}</li>
-                  ))}
-                </ul>
-              </div>
+              <ProjectSummary project={experience} />
 
               <div>
                 <S.Skills>사용 기술</S.Skills>
