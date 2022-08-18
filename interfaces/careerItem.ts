@@ -12,5 +12,5 @@ export default interface ICareerItem {
   position: string;
   period: string;
   projects: CareerProject[];
-  // experiences: CareerProject[];
+  experiences?: CareerProject[];
 }

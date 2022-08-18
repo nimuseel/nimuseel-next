@@ -44,6 +44,33 @@ export const Career = () => {
               </div>
             </ProjectList>
           ))}
+
+          {item.experiences?.map((experience) => (
+            <ProjectList key={experience.name}>
+              <div>
+                <S.ProjectName>
+                  {experience.name}
+                  <span>{experience.period}</span>
+                </S.ProjectName>
+
+                <p>{experience.description}</p>
+              </div>
+
+              <div>
+                <S.ProjectSummary>요약</S.ProjectSummary>
+                <ul>
+                  {experience.details.map((details) => (
+                    <li key={details}>{details}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <S.Skills>사용 기술</S.Skills>
+                <span>{experience.skills}</span>
+              </div>
+            </ProjectList>
+          ))}
         </CareerContent>
       ))}
     </S.CareerSection>
