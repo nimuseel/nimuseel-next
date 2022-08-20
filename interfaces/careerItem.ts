@@ -12,5 +12,8 @@ export interface ICareerItem {
   position: string;
   period: string;
   projects: CareerProject[];
+}
+
+export interface Experiences {
   experiences?: CareerProject[];
 }

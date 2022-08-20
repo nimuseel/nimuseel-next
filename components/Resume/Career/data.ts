@@ -1,4 +1,4 @@
-import { ICareerItem } from '../../../interfaces/careerItem';
+import { Experiences, ICareerItem } from '../../../interfaces/careerItem';
 
 export const careerList: ICareerItem[] = [
   {
@@ -163,14 +163,17 @@ export const careerList: ICareerItem[] = [
         skills: 'Angular, TypeScript, SCSS',
       },
     ],
+  },
+];
+
+export const otherExperience: Experiences[] = [
+  {
     experiences: [
       {
         name: 'DDD(Dynamic Designer Developer) 7기',
         period: '2022.04 ~ 2022.07',
         description: 'DDD 7기 프론트엔드 포지션 참여',
-        details: [
-          '사회 초년생들의 세탁 고민을 해결해주고자 런두잇 개발 진행 중',
-        ],
+        details: ['사회 초년생들의 세탁 고민을 해결해주는 런두잇 개발 진행 중'],
         skills: 'React Native, TypeScript',
       },
     ],
