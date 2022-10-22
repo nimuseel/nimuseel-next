@@ -8,6 +8,7 @@ export interface CareerProject {
 
 export interface ICareerItem {
   companyName: string;
+  companySlug: string;
   companyDescription: string;
   position: string;
   period: string;

@@ -1,4 +1,5 @@
 import { Button, Card, Grid, Row } from '@nextui-org/react';
+import Link from 'next/link';
 import React from 'react';
 import { careerList } from './data';
 
@@ -51,7 +52,9 @@ export const Career = () => {
               </Card.Body>
               <Card.Footer>
                 <Row justify="flex-end" align="center">
-                  <Button flat>자세히 보기</Button>
+                  <Link href={`/career/${item.companySlug}`} passHref>
+                    <Button flat>자세히 보기</Button>
+                  </Link>
                 </Row>
               </Card.Footer>
             </Card>

@@ -3,6 +3,7 @@ import { Experiences, ICareerItem } from '../../../interfaces/careerItem';
 export const careerList: ICareerItem[] = [
   {
     companyName: '레몬베이스',
+    companySlug: 'lemonbase',
     companyDescription:
       "레몬베이스는 회사에서의 삶(Worklife)이 '돈을 벌기 위해 수동적으로 보내는 시간'이 아닌 '나와 조직의 성장과 성공을 위해 주도적으로 활용하는 시간'이 될 수 있도록 일 하는 방식을 혁신하는 팀입니다.",
     position: '프론트엔드 엔지니어',
@@ -54,6 +55,7 @@ export const careerList: ICareerItem[] = [
   },
   {
     companyName: '지엔터프라이즈(구 에멘탈)',
+    companySlug: 'zent',
     companyDescription:
       '지엔터프라이즈의 비즈넵 서비스는 소상공인을 클라이언트로 하여 자본 흐름 파악과 세금 관련 사고를 미리 방지할 수 있는 솔루션입니다.',
     position: '프론트엔드 엔지니어',
