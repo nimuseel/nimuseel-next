@@ -1,14 +1,36 @@
+import { Button, Col } from '@nextui-org/react';
 import { careerList } from 'components/Resume/Career/data';
+import { ProjectDetails } from 'components/Resume/Career/ProjectDetails';
+import { ProjectInfo } from 'components/Resume/Career/ProjectInfo';
 import { InferGetStaticPropsType } from 'next';
 import React from 'react';
+import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 const Career = ({ career }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  console.log('slug', career);
+  const router = useRouter();
+
+  const { projects } = career;
 
   return (
-    <div>
-      <span>Career Page</span>
-    </div>
+    <>
+      <Button
+        flat
+        auto
+        style={{ backgroundColor: '#E5E5E5', marginBottom: '24px' }}
+        onClick={router.back}
+      >
+        <Image src="/icon/left-arrow.svg" width={16} height={16} />
+      </Button>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+        {projects.map((project) => (
+          <Col key={project.name}>
+            <ProjectInfo project={project} />
+            <ProjectDetails project={project} />
+          </Col>
+        ))}
+      </div>
+    </>
   );
 };
 

@@ -24,7 +24,7 @@ export const careerList: ICareerItem[] = [
           '엔지니어와 디자이너간의 UI/UX적인 커뮤니케이션 미스를 줄이고, 고객에게 일관된 UI/UX 경험을 전달하고자 디자인 시스템을 개발하고 있습니다.',
         details: [
           'Ant Design의 Modal 컴포넌트를 기반으로 Confirm Modal 작업을 진행했습니다.',
-          '기존에 사용하고 있던 Ant Design Confrim Modal의 90% 이상을 LDS Confirm Modal로 대체했습니다.',
+          '기존에 사용하고 있던 Ant Design Confrim Modal의 90% 이상을 디자인 시스템 Confirm Modal로 대체했습니다.',
         ],
         skills: 'React, TypeScript, Emotion',
       },
