@@ -9,7 +9,7 @@ export const Header = () => {
         <a className="logo">nimuseel</a>
       </Link>
       <S.HeaderExtraContainer>
-        <Link href="/resume">Resume</Link>
+        <Link href="/career">Career</Link>
         <Link href="https://github.com/nimuseel" passHref>
           <a target="_blank">Github</a>
         </Link>

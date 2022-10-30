@@ -1,7 +1,7 @@
 import { Button, Col } from '@nextui-org/react';
-import { careerList } from 'components/Resume/Career/data';
-import { ProjectDetails } from 'components/Resume/Career/ProjectDetails';
-import { ProjectInfo } from 'components/Resume/Career/ProjectInfo';
+import { careerList } from 'components/Career/Career/data';
+import { ProjectDetails } from 'components/Career/Career/ProjectDetails';
+import { ProjectInfo } from 'components/Career/Career/ProjectInfo';
 import { InferGetStaticPropsType } from 'next';
 import React from 'react';
 import Image from 'next/image';
